@@ -99,7 +99,7 @@ System.out.println("\nNames Containing 'top':");
 session.createQuery( "FROM Product WHERE name LIKE '%top%'", Product.class).list() .forEach(p -> System.out.println(p.getName()));
 // d) Names with exact length = 5
 System.out.println("\nNames with Exactly 5 Characters:");
-session.createQuery("FROM Product WHERE LENGTH(name) = 5", Product.class).list .forEach(p -> System.out.println(p.getName()));
+session.createQuery("FROM Product WHERE LENGTH(name) = 5", Product.class).list().forEach(p -> System.out.println(p.getName()));
 session.close();
 }
 }
